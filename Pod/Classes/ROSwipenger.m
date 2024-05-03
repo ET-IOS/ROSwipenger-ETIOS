@@ -380,8 +380,9 @@
 
 
 - (void) loadViewControllerAtIndex:(NSInteger)index {
-    
-    if (index > self.childViewControllers.count - 1)
+
+    NSInteger count = self.childViewControllers.count;
+    if (index > count-1)
         return;
     
     
