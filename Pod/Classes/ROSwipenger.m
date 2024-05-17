@@ -381,7 +381,7 @@
 
 - (void) loadViewControllerAtIndex:(NSInteger)index {
     NSInteger count = self.childViewControllers.count;
-    if (index > count-1)
+    if ((index < 0) || (index > count-1))
         return;
     
     UIViewController *childViewController = self.childViewControllers[index];
